@@ -34,11 +34,12 @@ public class BarracksScript : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == ("basearea"))
+        if (collision.gameObject.tag == ("BaseArea"))
         {
             if (Player.GetComponent<PlayerManager>().Money >= Cost)
             {
                 BluePrintMode = false;
+                IsBuilt = true;
                 Player.GetComponent<PlayerManager>().OpenTopMenu();
                 Player.GetComponent<PlayerManager>().Money -= Cost;
             }

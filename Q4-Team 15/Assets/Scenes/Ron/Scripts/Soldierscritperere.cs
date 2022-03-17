@@ -28,6 +28,18 @@ public class Soldierscritperere : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            IsSelected = true;
+        }
+        if (Input.GetKeyUp(KeyCode.Space))
+        {
+            IsSelected = false;
+            GoToPosition.x = Input.mousePosition.x;
+            GoToPosition.y = Input.mousePosition.y;
+            GoToPosition = Camera.main.ScreenToWorldPoint(GoToPosition);
+            GoToPosition.z = 0;
+        }
         if (IsSelected == true) {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
