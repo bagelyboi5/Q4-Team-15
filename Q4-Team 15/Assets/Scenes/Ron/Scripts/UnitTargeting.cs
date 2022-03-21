@@ -81,14 +81,12 @@ public class UnitTargeting : MonoBehaviour
             Vector2 dir = new Vector2(PLayer.transform.position.x - transform.position.x,
                                PLayer.transform.position.y - transform.position.y);
             gameObject.transform.up = dir;
-            Destroy(PLayer);
         }
         if (IsEnemey == false)
         {
             Vector2 dir = new Vector2(Enemey.transform.position.x - transform.position.x,
                                Enemey.transform.position.y - transform.position.y);
             gameObject.transform.up = dir;
-            Destroy(Enemey);
         }
     }
 }
