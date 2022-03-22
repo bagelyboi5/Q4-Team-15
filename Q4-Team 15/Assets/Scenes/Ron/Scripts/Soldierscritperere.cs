@@ -35,36 +35,35 @@ public class Soldierscritperere : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Space))
         {
             IsSelected = false;
-            GoToPosition.x = Input.mousePosition.x;
-            GoToPosition.y = Input.mousePosition.y;
+            GoToPosition.x = Input.mousePosition.x + Random.Range(-250,250);
+            GoToPosition.y = Input.mousePosition.y + Random.Range(-250, 250);
             GoToPosition = Camera.main.ScreenToWorldPoint(GoToPosition);
             GoToPosition.z = 0;
         }
-        if (IsSelected == true) {
+        if (IsSelected == true)
+        {
             Vector3 mousePosition = Input.mousePosition;
             mousePosition = Camera.main.ScreenToWorldPoint(mousePosition);
-
             Vector2 direction = new Vector2(
                 mousePosition.x - transform.position.x,
                 mousePosition.y - transform.position.y
             );
-
             transform.up = direction;
             if (Input.GetKeyUp(KeyCode.Mouse0))
             {
-                GoToPosition.x = Input.mousePosition.x;
-                GoToPosition.y = Input.mousePosition.y;
+                GoToPosition.x = Input.mousePosition.x + Random.Range(-50, 50);
+                GoToPosition.y = Input.mousePosition.y + Random.Range(-50, 50);
                 GoToPosition = Camera.main.ScreenToWorldPoint(GoToPosition);
                 GoToPosition.z = 0;
                 IsSelected = false;
 
             }
         }
-        if( IsSelected == false)
+        if ( IsSelected == false)
         {
-            MoveToCammand.transform.position = GoToPosition; 
+            MoveToCammand.transform.position = GoToPosition;
+            GetComponent<Pathfinding.AIDestinationSetter>().target = MoveToCammand.transform;
         }
-        gameObject.transform.position = (Vector2.MoveTowards(transform.position, MoveToCammand.transform.position, Speed * Time.deltaTime));
 
     }
 }

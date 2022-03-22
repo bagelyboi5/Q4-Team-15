@@ -22,7 +22,7 @@ public class PlayerManager : MonoBehaviour
     public void Update()
     {
         MoneyTezt.GetComponent<Text>().text = "Money: " + Money;
-       DistanceToBarracks = Vector3.Distance(GameObject.Find("barracks(Clone)").transform.position, PlayerBase.transform.position);
+        DistanceToBarracks = Vector3.Distance(GameObject.Find("barracks(Clone)").transform.position, PlayerBase.transform.position);
     }
     public void OpenTopMenu()
     {
