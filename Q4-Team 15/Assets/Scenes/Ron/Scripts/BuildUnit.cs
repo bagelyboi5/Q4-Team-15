@@ -8,7 +8,11 @@ public class BuildUnit : MonoBehaviour
     
     public void BuildSoldier()
     {
-        GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 100f;
-        Instantiate(soldier,GameObject.Find("Red Base").transform.position,Quaternion.identity,null);
+        if(GameObject.Find("Player").GetComponent<PlayerManager>().Money >= 100f)
+        {
+            GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 100f;
+            Instantiate(soldier, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
+        }
+
     }
 }

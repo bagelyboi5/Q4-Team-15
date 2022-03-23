@@ -22,7 +22,11 @@ public class PlayerManager : MonoBehaviour
     public void Update()
     {
         MoneyTezt.GetComponent<Text>().text = "Money: " + Money;
+        if(GameObject.Find("barracks(Clone)") != null)
+        {
         DistanceToBarracks = Vector3.Distance(GameObject.Find("barracks(Clone)").transform.position, PlayerBase.transform.position);
+        }
+
     }
     public void OpenTopMenu()
     {
@@ -43,6 +47,8 @@ public class PlayerManager : MonoBehaviour
         {
             Debug.Log("Your barracks is to far away");
         }
+
+
         
     }
 

@@ -24,7 +24,6 @@ public class UnitTargeting : MonoBehaviour
             foreach (GameObject e in GameObject.FindGameObjectsWithTag("Enemey"))  //Player stuff
             {
                 float  Distance = Vector2.Distance(e.transform.position, currentUnit);
-                Debug.Log(e.gameObject.name + " " + Distance + " " + closestDistance);
 
                 if (Distance < high)
                 {
