@@ -22,9 +22,9 @@ public class PlayerManager : MonoBehaviour
     public void Update()
     {
         MoneyTezt.GetComponent<Text>().text = "Money: " + Money;
-        if(GameObject.Find("barracks(Clone)") != null)
+        if(GameObject.Find("BArracks(Clone)") != null)
         {
-        DistanceToBarracks = Vector3.Distance(GameObject.Find("barracks(Clone)").transform.position, PlayerBase.transform.position);
+        DistanceToBarracks = Vector3.Distance(GameObject.Find("BArracks(Clone)").transform.position, PlayerBase.transform.position);
         }
 
     }
@@ -34,12 +34,12 @@ public class PlayerManager : MonoBehaviour
     }
     public void BuildUnit()
     {
-        float distance = Vector3.Distance(GameObject.Find("barracks(Clone)").transform.position, PlayerBase.transform.position);
+        float distance = Vector3.Distance(GameObject.Find("BArracks(Clone)").transform.position, PlayerBase.transform.position);
         if (distance < 5f)
         {
-    ClosestBarracks = GameObject.Find("barracks(Clone)");
             if(Money > 100)
             {
+                ClosestBarracks = GameObject.Find("BArracks(Clone)");
                 ClosestBarracks.GetComponent<BuildUnit>().BuildSoldier();
             }
         }
