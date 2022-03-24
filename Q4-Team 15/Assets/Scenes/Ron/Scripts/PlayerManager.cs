@@ -15,6 +15,10 @@ public class PlayerManager : MonoBehaviour
     public GameObject PlayerBase;
     public GameObject ClosestBarracks;
     public float DistanceToBarracks;
+    public GameObject BombButton;
+
+
+
     public void Start()
     {
         MoneyTezt = GameObject.Find("MoneyText");
@@ -31,6 +35,10 @@ public class PlayerManager : MonoBehaviour
     public void OpenTopMenu()
     {
         barracksUnits.SetActive(true);
+    }
+    public void OpenTheBombDoor()
+    {
+        BombButton.SetActive(true);
     }
     public void BuildUnit()
     {
