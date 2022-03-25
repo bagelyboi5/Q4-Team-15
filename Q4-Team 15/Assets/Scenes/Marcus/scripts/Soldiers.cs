@@ -14,14 +14,24 @@ public class Soldiers : MonoBehaviour
     public GameObject Bullet;
     public GameObject FirePoint;
     public float bulletSpeed;
+    public float FireRate;
+    public float UnitHealth;
+    public bool canfire;
+
+
+
 
     void Start()
     {
         rb2 = GetComponent<Rigidbody2D>();
     }
-
     public void Update()
     {
+        if (UnitHealth < 0)
+        {
+            Destroy(gameObject);
+        }
+        //Targeting BS
         currentUnit.x = transform.position.x;
         currentUnit.y = transform.position.y;
         if (IsEnemey == false)
@@ -91,21 +101,34 @@ public class Soldiers : MonoBehaviour
             Vector2 dir = new Vector2(PLayer.transform.position.x - transform.position.x,
                                PLayer.transform.position.y - transform.position.y);
             gameObject.transform.up = dir;
-            GameObject b = Instantiate(Bullet, FirePoint.transform.position, Quaternion.identity);
-            Rigidbody2D rb2bullet = b.GetComponent<Rigidbody2D>();
-            rb2bullet.AddForce(bulletSpeed * transform.up);
-            Destroy(b, 5);
+            if(canfire == true)
+            {
+                StartCoroutine(Shoot());
+            }
+
         }
         //IS the friendly unit
         if (IsEnemey == false)
         {
+
             Vector2 dir = new Vector2(Enemey.transform.position.x - transform.position.x,
                                Enemey.transform.position.y - transform.position.y);
             gameObject.transform.up = dir;
-            GameObject b = Instantiate(Bullet, FirePoint.transform.position, Quaternion.identity);
-            Rigidbody2D rb2bullet = b.GetComponent<Rigidbody2D>();
-            rb2bullet.AddForce(bulletSpeed * transform.up);
-            Destroy(b, 5);
+            if(canfire == true)
+            {
+                StartCoroutine(Shoot());
+            }
         }
+    }
+    public IEnumerator Shoot()
+    {
+        canfire = false;
+        GameObject b = Instantiate(Bullet, FirePoint.transform.position, Quaternion.identity);
+        Rigidbody2D rb2bullet = b.GetComponent<Rigidbody2D>();
+        rb2bullet.AddForce(bulletSpeed * transform.up);
+        Destroy(b, 5);
+        yield return new WaitForSeconds(FireRate);
+        canfire = true;
+        
     }
 }
