@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BarracksScript : MonoBehaviour
+public class Buildingbomb : MonoBehaviour
 {
     public int Cost;
     public bool IsBuilt;
@@ -41,10 +41,9 @@ public class BarracksScript : MonoBehaviour
             {
                 BluePrintMode = false;
                 IsBuilt = true;
-                Player.GetComponent<PlayerManager>().OpenTopMenu();
+                Player.GetComponent<PlayerManager>().OpenTheBombDoor();
                 Player.GetComponent<PlayerManager>().Money -= Cost;
             }
         }
     }
-
 }
