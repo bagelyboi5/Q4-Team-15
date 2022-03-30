@@ -17,19 +17,22 @@ public class Soldiers : MonoBehaviour
     public float FireRate;
     public float UnitHealth;
     public bool canfire;
+    public GameObject EnemyBase;
 
 
 
 
     void Start()
     {
+        EnemyBase = GameObject.Find("BlueBase");
         rb2 = GetComponent<Rigidbody2D>();
     }
     public void Update()
     {
         if (UnitHealth < 0)
         {
-            Destroy(gameObject);
+            EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
+            EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
         }
         //Targeting BS
         currentUnit.x = transform.position.x;
