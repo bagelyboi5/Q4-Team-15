@@ -3,10 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CutSceneToGame : MonoBehaviour
+public class MenuToGame : MonoBehaviour
 {
-    public void ButtonMoveScene(string level)
+    public void PlayGame()
     {
-        SceneManager.LoadScene(level);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void QuitGame()
+    {
+        Debug.Log("quit");
+        Application.Quit();
     }
 }
