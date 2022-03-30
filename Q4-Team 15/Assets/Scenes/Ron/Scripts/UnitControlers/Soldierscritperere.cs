@@ -20,10 +20,7 @@ public class Soldierscritperere : MonoBehaviour
         if(IsSelected == false)
         {
             IsSelected = true;
-        } else
-        {
-            IsSelected = false;
-        }
+        }   
     }
 
     void Update()
@@ -49,7 +46,7 @@ public class Soldierscritperere : MonoBehaviour
                 mousePosition.y - transform.position.y
             );
             transform.up = direction;
-            if (Input.GetKeyUp(KeyCode.Mouse0))
+            if (Input.GetKeyUp(KeyCode.Mouse1))
             {
                 GoToPosition.x = Input.mousePosition.x + Random.Range(-50, 50);
                 GoToPosition.y = Input.mousePosition.y + Random.Range(-50, 50);

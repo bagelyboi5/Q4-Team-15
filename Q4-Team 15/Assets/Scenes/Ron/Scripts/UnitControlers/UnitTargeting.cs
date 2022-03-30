@@ -24,7 +24,6 @@ public class UnitTargeting : MonoBehaviour
             foreach (GameObject e in GameObject.FindGameObjectsWithTag("Enemey"))  //Player stuff
             {
                 float  Distance = Vector2.Distance(e.transform.position, currentUnit);
-                Debug.Log(e.gameObject.name + " " + Distance + " " + closestDistance);
 
                 if (Distance < high)
                 {
@@ -76,12 +75,14 @@ public class UnitTargeting : MonoBehaviour
     }
     public void Aim()
     {
+        //Is the enemy
         if (IsEnemey == true)
         {
             Vector2 dir = new Vector2(PLayer.transform.position.x - transform.position.x,
                                PLayer.transform.position.y - transform.position.y);
             gameObject.transform.up = dir;
         }
+        //IS the friendly unit
         if (IsEnemey == false)
         {
             Vector2 dir = new Vector2(Enemey.transform.position.x - transform.position.x,
