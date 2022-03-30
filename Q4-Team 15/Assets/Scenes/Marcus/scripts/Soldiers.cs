@@ -17,84 +17,118 @@ public class Soldiers : MonoBehaviour
     public float FireRate;
     public float UnitHealth;
     public bool canfire;
-    public GameObject EnemyBase;
+    public GameObject RespawnPoint;
+    private Vector3 SpawnPoint;
+    private bool IsAlive = true;
 
 
 
 
     void Start()
     {
-        EnemyBase = GameObject.Find("BlueBase");
         rb2 = GetComponent<Rigidbody2D>();
+    }
+
+
+    IEnumerator UnitDied()
+    {
+        gameObject.GetComponent<SpriteRenderer>().enabled = false;
+        gameObject.GetComponent<CircleCollider2D>().enabled = false;
+        IsAlive = false;
+        gameObject.tag = "Untagged";
+        yield return new WaitForSeconds(10);
+        gameObject.tag = "Enemey";
+        IsAlive = true;
+        gameObject.GetComponent<SpriteRenderer>().enabled = true;
+        gameObject.GetComponent<CircleCollider2D>().enabled = true;
+        UnitHealth = 100;
+
+
     }
     public void Update()
     {
         if (UnitHealth < 0)
         {
-            EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
-            EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
+            if(IsEnemey == true)
+            {
+                StartCoroutine(UnitDied());
+            } else if (IsEnemey == false)
+            {
+                Destroy(gameObject);
+            }
         }
-        //Targeting BS
-        currentUnit.x = transform.position.x;
-        currentUnit.y = transform.position.y;
-        if (IsEnemey == false)
+
+
+
+
+
+
+        if(IsAlive == true)
         {
-            var high = 5f;
-            closestDistance = high;
-
-            foreach (GameObject e in GameObject.FindGameObjectsWithTag("Enemey"))  //Player stuff
+            currentUnit.x = transform.position.x;
+            currentUnit.y = transform.position.y;
+            if (IsEnemey == false)
             {
-                float Distance = Vector2.Distance(e.transform.position, currentUnit);
+                var high = 5f;
+                closestDistance = high;
 
-                if (Distance < high)
+                foreach (GameObject e in GameObject.FindGameObjectsWithTag("Enemey"))  //Player stuff
                 {
+                    float Distance = Vector2.Distance(e.transform.position, currentUnit);
 
-                    //Find the closest enemy and make it the target...
-
-                    if (Distance < closestDistance)
+                    if (Distance < high)
                     {
-                        closestDistance = Distance;
-                        Enemey = e;
+
+                        //Find the closest enemy and make it the target...
+
+                        if (Distance < closestDistance)
+                        {
+                            closestDistance = Distance;
+                            Enemey = e;
+                        }
+
                     }
+                }
+                if (Enemey != null)
+                {
+                    if (Vector3.Distance(Enemey.transform.position, gameObject.transform.position) > 5f)
+                    {
+                        Enemey = null;
+                    } else if (Enemey.tag != "Enemey")
+                    {
+                        Enemey = null;
+                    }
+                    else
+                    {
+                        Aim();
+                    }
+                }
+            }
+            else
+            {   //Enemy Stuff
+                var high = 5f;
+                foreach (GameObject r in GameObject.FindGameObjectsWithTag("Player"))
+                {
+                    var Distance = Vector2.Distance(r.transform.position, currentUnit);
+                    if (Distance < high)
+                    {
+                        PLayer = r;
+                    }
+                }
+                if (PLayer != null)
+                {
+                    if (Vector3.Distance(PLayer.transform.position, gameObject.transform.position) > 5f)
+                    {
+                        PLayer = null;
+                    }
+                    else
+                    {
+                        Aim();
+                    }
+                }
+            }
 
-                }
-            }
-            if (Enemey != null)
-            {
-                if (Vector3.Distance(Enemey.transform.position, gameObject.transform.position) > 5f)
-                {
-                    Enemey = null;
-                }
-                else
-                {
-                    Aim();
-                }
-            }
         }
-        else
-        {   //Enemy Stuff
-            var high = 5f;
-            foreach (GameObject r in GameObject.FindGameObjectsWithTag("Player"))
-            {
-                var Distance = Vector2.Distance(r.transform.position, currentUnit);
-                if (Distance < high)
-                {
-                    PLayer = r;
-                }
-            }
-            if (PLayer != null)
-            {
-                if (Vector3.Distance(PLayer.transform.position, gameObject.transform.position) > 5f)
-                {
-                    PLayer = null;
-                }
-                else
-                {
-                    Aim();
-                }
-            }
-        }
-
     }
     public void Aim()
     {
