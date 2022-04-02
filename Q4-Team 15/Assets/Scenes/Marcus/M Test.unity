@@ -2128,7 +2128,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1468738246}
-        m_MethodName: BuildAntiArmorSoldier
+        m_MethodName: BuildAArmorSoldier
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2518,6 +2518,7 @@ MonoBehaviour:
   Mine: {fileID: 8217962706446658267, guid: bb7a8a2c152fff34cb0e12ca378d52fd, type: 3}
   Barracks: {fileID: 9179338940566336857, guid: f6ccf32d67d3cc24a96efd5e99608d8a,
     type: 3}
+  ICBFLaunchTube: {fileID: 0}
 --- !u!114 &1468738246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2531,8 +2532,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soldier: {fileID: 3022546459947456646, guid: 3f43ebac31906e649aa9bac519b7f42c, type: 3}
-  AntiArmorSoldier: {fileID: 5979316485562929968, guid: afceb1473f1f4b74899a08f5fcb2c120,
+  AArmorSoldier: {fileID: 5979316485562929968, guid: afceb1473f1f4b74899a08f5fcb2c120,
     type: 3}
+  ICBF: {fileID: 7274661875700231614, guid: 909678b9e2c61594b97189a1373faa43, type: 3}
 --- !u!114 &1468738247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2556,6 +2558,7 @@ MonoBehaviour:
   PlayerBase: {fileID: 716434408}
   ClosestBarracks: {fileID: 0}
   DistanceToBarracks: 0
+  BombButton: {fileID: 0}
 --- !u!4 &1468738248
 Transform:
   m_ObjectHideFlags: 0
