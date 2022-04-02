@@ -12,6 +12,7 @@ public class PlayerManager : MonoBehaviour
     public int planeCount;
     public GameObject MoneyTezt;
     public GameObject barracksUnits;
+    public GameObject barracksUnits1;
     public GameObject PlayerBase;
     public GameObject ClosestBarracks;
     public float DistanceToBarracks;
@@ -35,6 +36,7 @@ public class PlayerManager : MonoBehaviour
     public void OpenTopMenu()
     {
         barracksUnits.SetActive(true);
+        barracksUnits1.SetActive(true);
     }
     public void OpenTheBombDoor()
     {

@@ -8,7 +8,14 @@ public class BulletDie : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Target = collision.gameObject;
-        Target.GetComponent<Soldiers>().UnitHealth -= 10;
-        Destroy(this.gameObject);
+        if (Target.GetComponent<Soldiers>().Armor == false)
+        {
+            Target.GetComponent<Soldiers>().UnitHealth -= 10;
+            Destroy(this.gameObject);
+        }
+        else
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
