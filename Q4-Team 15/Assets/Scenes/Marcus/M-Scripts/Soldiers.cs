@@ -17,6 +17,9 @@ public class Soldiers : MonoBehaviour
     public float FireRate;
     public float UnitHealth;
     public bool canfire;
+    public GameObject RespawnPoint;
+    private Vector3 SpawnPoint;
+    private bool IsAlive = true;
     public bool Armor;
 
 
