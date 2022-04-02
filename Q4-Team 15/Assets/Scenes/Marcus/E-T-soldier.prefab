@@ -191,7 +191,7 @@ Transform:
   m_GameObject: {fileID: 5374029951668835480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.59, y: 1.33, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5374029952294256040}
   - {fileID: 5374029952373855942}
@@ -304,11 +304,11 @@ MonoBehaviour:
   ToClosestEnemy: 0
   IsEnemey: 1
   closestDistance: 0
-  Bullet: {fileID: 1449316368117337357, guid: 67d23045d8baa1b438fa646fc9a14f60, type: 3}
+  Bullet: {fileID: 2795946901909040761, guid: a1a3a90b53d9a994399808db4204dcb6, type: 3}
   FirePoint: {fileID: 5374029952431671674}
   bulletSpeed: 1000
-  FireRate: 10
-  UnitHealth: 200
+  FireRate: 5
+  UnitHealth: 500
   canfire: 1
   RespawnPoint: {fileID: 0}
   Armor: 1

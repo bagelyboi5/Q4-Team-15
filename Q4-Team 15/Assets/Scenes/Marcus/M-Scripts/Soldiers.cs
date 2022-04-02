@@ -31,7 +31,7 @@ public class Soldiers : MonoBehaviour
     }
     public void Update()
     {
-        if (UnitHealth < 0)
+        if (UnitHealth <= 0)
         {
             Destroy(gameObject);
         }
