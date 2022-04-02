@@ -10,12 +10,12 @@ public class AntiArmorBullet : MonoBehaviour
         Target = collision.gameObject;
         if (Target.GetComponent<Soldiers>().Armor == true)
         {
-            Target.GetComponent<Soldiers>().UnitHealth -= 10;
+            Target.GetComponent<Soldiers>().UnitHealth -= 100;
             Destroy(this.gameObject);
         }
         else
         {
-            Target.GetComponent<Soldiers>().UnitHealth -= 10;
+            Target.GetComponent<Soldiers>().UnitHealth -= 100;
             Destroy(this.gameObject);
         }
     }

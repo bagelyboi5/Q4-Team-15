@@ -2532,7 +2532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soldier: {fileID: 3022546459947456646, guid: 3f43ebac31906e649aa9bac519b7f42c, type: 3}
-  AArmorSoldier: {fileID: 5979316485562929968, guid: afceb1473f1f4b74899a08f5fcb2c120,
+  AArmorSoldier: {fileID: 147277254675830445, guid: afceb1473f1f4b74899a08f5fcb2c120,
     type: 3}
   ICBF: {fileID: 7274661875700231614, guid: 909678b9e2c61594b97189a1373faa43, type: 3}
 --- !u!114 &1468738247
