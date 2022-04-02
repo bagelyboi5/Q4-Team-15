@@ -17,6 +17,7 @@ public class Soldiers : MonoBehaviour
     public float FireRate;
     public float UnitHealth;
     public bool canfire;
+    public bool Armor;
 
 
 
