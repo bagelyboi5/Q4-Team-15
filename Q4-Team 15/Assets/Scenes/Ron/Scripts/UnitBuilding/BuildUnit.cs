@@ -5,7 +5,7 @@ using UnityEngine;
 public class BuildUnit : MonoBehaviour
 {
     public GameObject soldier;
-    public GameObject AArmorSoldier;
+    public GameObject Tank;
     public GameObject ICBF;
     
     public void BuildSoldier()
@@ -16,12 +16,12 @@ public class BuildUnit : MonoBehaviour
             Instantiate(soldier, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
         }
     }
-    public void BuildAArmorSoldier()
+    public void BuildTank()
     {
-        if (GameObject.Find("Player").GetComponent<PlayerManager>().Money >= 100f)
+        if (GameObject.Find("Player").GetComponent<PlayerManager>().Money >= 1000f)
         {
-            GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 100f;
-            Instantiate(AArmorSoldier, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
+            GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 1000f;
+            Instantiate(Tank, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
         }
     }
     public void ImgoingtoEndGame()

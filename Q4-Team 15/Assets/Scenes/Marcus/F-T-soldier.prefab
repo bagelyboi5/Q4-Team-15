@@ -288,9 +288,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.57009506}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 1.0700951
 --- !u!114 &4391260416340168015
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -315,7 +315,7 @@ MonoBehaviour:
   FireRate: 5
   UnitHealth: 500
   canfire: 1
-  RespawnPoint: {fileID: 0}
+  EnemyBase: {fileID: 0}
   Armor: 1
 --- !u!111 &4391260416340168012
 Animation:
@@ -624,7 +624,7 @@ MonoBehaviour:
   FireRate: 0.5
   UnitHealth: 100
   canfire: 1
-  RespawnPoint: {fileID: 0}
+  EnemyBase: {fileID: 0}
   Armor: 0
 --- !u!1 &4391260417458772110
 GameObject:
