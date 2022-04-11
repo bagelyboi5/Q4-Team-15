@@ -17,8 +17,7 @@ public class Soldiers : MonoBehaviour
     public float FireRate;
     public float UnitHealth;
     public bool canfire;
-    public GameObject RespawnPoint;
-    private Vector3 SpawnPoint;
+    public GameObject EnemyBase;
     private bool IsAlive = true;
     public bool Armor;
 
@@ -28,12 +27,14 @@ public class Soldiers : MonoBehaviour
     void Start()
     {
         rb2 = GetComponent<Rigidbody2D>();
+        EnemyBase = GameObject.Find("BlueBase");
     }
     public void Update()
     {
         if (UnitHealth <= 0)
         {
-            Destroy(gameObject);
+            EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
+            EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
         }
         //Targeting BS
         currentUnit.x = transform.position.x;

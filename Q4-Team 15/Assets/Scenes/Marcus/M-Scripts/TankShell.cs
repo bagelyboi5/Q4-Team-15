@@ -19,6 +19,7 @@ public class TankShell : MonoBehaviour
         {
             Explosion.SetActive(true);
             Target.GetComponent<Soldiers>().UnitHealth -= 100;
+            Target.GetComponent<BaseHealth>().Basehealths -= 50;
             Destroy(this.gameObject);
         }
     }

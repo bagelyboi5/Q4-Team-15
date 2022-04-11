@@ -26,6 +26,7 @@ public class ICBFcontroler : MonoBehaviour
                 Destroy(T);
             }
 
+
         }
         CountDown.text = " " + CountdownTimer;
     

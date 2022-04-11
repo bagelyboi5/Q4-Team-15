@@ -8,22 +8,27 @@ public class EnemyRespawnScript : MonoBehaviour
     public GameObject EnemyUnitToSpawn;
     public GameObject EnemyBase;
     public Vector3 UnitThatDiedPosition;
+    public List<Vector3> DeadUnitPositon;
    public void UnitDied()
     {
         if (UnitThatDied.GetComponent<Soldiers>().IsEnemey == true)
         {
+            DeadUnitPositon.Add(UnitThatDiedPosition);
             StartCoroutine(SpawnUnit());
             UnitThatDiedPosition = UnitThatDied.transform.position;
         }
         Destroy(UnitThatDied);
     }
 
-
-
-    IEnumerator SpawnUnit()
+    public IEnumerator SpawnUnit()
     {
-       yield return new WaitForSeconds(10);
-        Instantiate(EnemyUnitToSpawn, UnitThatDiedPosition, Quaternion.identity, null);
+        yield return new WaitForSeconds(10);
+        Instantiate(EnemyUnitToSpawn, DeadUnitPositon[1], Quaternion.identity, null);
+        DeadUnitPositon.RemoveAt(1);
         
     }
+
+
+
+
 }

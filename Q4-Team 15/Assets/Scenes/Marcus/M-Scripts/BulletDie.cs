@@ -11,6 +11,7 @@ public class BulletDie : MonoBehaviour
         if (Target.GetComponent<Soldiers>().Armor == false)
         {
             Target.GetComponent<Soldiers>().UnitHealth -= 10;
+            Target.GetComponent<BaseHealth>().Basehealths -= 5;
             Destroy(this.gameObject);
         }
         else
