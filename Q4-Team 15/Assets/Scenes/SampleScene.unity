@@ -155,8 +155,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 500, y: 320}
+  m_AnchoredPosition: {x: -0.000011444, y: 5.0009}
+  m_SizeDelta: {x: 137.05612, y: 109.99824}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &82283069
 MonoBehaviour:
@@ -171,7 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 0.32549018, g: 0.94213575, b: 0.972549, a: 0.72156864}
   m_RaycastTarget: 1
   m_Maskable: 1
   m_OnCullStateChanged:
@@ -331,10 +331,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
+    m_BestFit: 0
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -342,9 +342,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Build ICBF
-
-    LAUNCHTUBE'
+  m_Text: "Build ICBF\n Cost \n-1000"
 --- !u!222 &162488745
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -366,7 +364,7 @@ GameObject:
   - component: {fileID: 223124939}
   - component: {fileID: 223124938}
   m_Layer: 5
-  m_Name: Button (2)
+  m_Name: BuildBarracks
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -385,12 +383,12 @@ RectTransform:
   m_Children:
   - {fileID: 976267438}
   m_Father: {fileID: 254514686}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -516.87, y: 215.52}
-  m_SizeDelta: {x: 116.987076, y: 44.107597}
+  m_AnchoredPosition: {x: -516.87, y: 165}
+  m_SizeDelta: {x: 115, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &223124938
 MonoBehaviour:
@@ -661,12 +659,12 @@ RectTransform:
   m_Children:
   - {fileID: 1349437866}
   - {fileID: 2110357082}
+  - {fileID: 2040018609}
+  - {fileID: 223124937}
   - {fileID: 625961677}
   - {fileID: 442564911}
-  - {fileID: 223124937}
-  - {fileID: 772435582}
   - {fileID: 1540762101}
-  - {fileID: 2040018609}
+  - {fileID: 772435582}
   - {fileID: 82283068}
   m_Father: {fileID: 0}
   m_RootOrder: 14
@@ -818,7 +816,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.024242401}
+  m_AnchoredPosition: {x: 0, y: -0.024253845}
   m_SizeDelta: {x: 0, y: -0.04850769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &351662079
@@ -842,10 +840,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 10
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -896,12 +894,12 @@ RectTransform:
   m_Children:
   - {fileID: 1639019456}
   m_Father: {fileID: 254514686}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -516.57, y: -144.84}
-  m_SizeDelta: {x: 116.96661, y: 35.416107}
+  m_AnchoredPosition: {x: -518, y: -95}
+  m_SizeDelta: {x: 115, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &442564912
 MonoBehaviour:
@@ -1208,12 +1206,12 @@ RectTransform:
   m_Children:
   - {fileID: 2132674221}
   m_Father: {fileID: 254514686}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -517.38, y: -180.8}
-  m_SizeDelta: {x: 116.987076, y: 35.64628}
+  m_AnchoredPosition: {x: -518.37, y: -165}
+  m_SizeDelta: {x: 115, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &625961678
 MonoBehaviour:
@@ -1336,7 +1334,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 254514686}
-  m_RootOrder: 5
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -1580,8 +1578,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 3.8}
-  m_SizeDelta: {x: 0, y: 7.503006}
+  m_AnchoredPosition: {x: 0, y: 0.024242401}
+  m_SizeDelta: {x: 0, y: -0.04850769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &976267439
 MonoBehaviour:
@@ -1604,10 +1602,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
+    m_BestFit: 0
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -1617,7 +1615,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Build
 
-    Barracks'
+    Barracks
+
+    Cost -100'
 --- !u!222 &976267440
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1641,7 +1641,7 @@ GameObject:
   - component: {fileID: 1003612041}
   m_Layer: 0
   m_Name: BlueBase
-  m_TagString: Enemey
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1743,7 +1743,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 2
   m_Sprite: {fileID: 21300000, guid: a3f441771da5cf446a3838eef947ea2a, type: 3}
-  m_Color: {r: 0, g: 0.015195131, b: 1, a: 1}
+  m_Color: {r: 0.9811321, g: 0.19900322, b: 0.20820495, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -2397,10 +2397,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 32
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 3
+    m_BestFit: 0
+    m_MinSize: 0
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -2706,8 +2706,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 18.38, y: -247.3}
-  m_SizeDelta: {x: 116.987076, y: 43.17415}
+  m_AnchoredPosition: {x: -516.87, y: -235}
+  m_SizeDelta: {x: 115, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1540762102
 MonoBehaviour:
@@ -3047,10 +3047,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
+    m_BestFit: 0
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
@@ -4240,7 +4240,7 @@ GameObject:
   - component: {fileID: 2040018611}
   - component: {fileID: 2040018610}
   m_Layer: 5
-  m_Name: buildICBFLaunchbay
+  m_Name: BuildICBF
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4259,12 +4259,12 @@ RectTransform:
   m_Children:
   - {fileID: 162488743}
   m_Father: {fileID: 254514686}
-  m_RootOrder: 7
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -517.38, y: -233.88}
-  m_SizeDelta: {x: 116.987076, y: 67.487656}
+  m_AnchoredPosition: {x: -518.37, y: 95}
+  m_SizeDelta: {x: 115, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2040018610
 MonoBehaviour:
@@ -4552,7 +4552,7 @@ GameObject:
   - component: {fileID: 2110357084}
   - component: {fileID: 2110357083}
   m_Layer: 5
-  m_Name: Button
+  m_Name: BuildMine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4575,8 +4575,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -516.87, y: 253.18}
-  m_SizeDelta: {x: 116.987076, y: 31.503647}
+  m_AnchoredPosition: {x: -518.37, y: 235}
+  m_SizeDelta: {x: 115, y: 70}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2110357083
 MonoBehaviour:
@@ -4703,7 +4703,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.024242401}
+  m_AnchoredPosition: {x: 0, y: -0.02425766}
   m_SizeDelta: {x: 0, y: -0.04850769}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2132674222
@@ -4727,10 +4727,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
+    m_FontSize: 20
     m_FontStyle: 0
-    m_BestFit: 1
-    m_MinSize: 10
+    m_BestFit: 0
+    m_MinSize: 2
     m_MaxSize: 40
     m_Alignment: 4
     m_AlignByGeometry: 0
