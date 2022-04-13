@@ -23,12 +23,15 @@ public class ICBFcontroler : MonoBehaviour
             }
             foreach (GameObject T in GameObject.FindGameObjectsWithTag("Enemey"))
             {
-                Destroy(T);
+                T.GetComponent<Soldiers>().UnitHealth = 0;
             }
+            CountDown.text = "";
+            Destroy(gameObject);
+
 
 
         }
-        CountDown.text = " " + CountdownTimer;
+        CountDown.text = "" +CountdownTimer;
     
     }
     public void Start()
