@@ -2,21 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletDie : MonoBehaviour
+public class Bullet : MonoBehaviour
 {
     private GameObject Target;
+    public int Damage;
+    public bool AArmor;
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Target = collision.gameObject;
-        if (Target.GetComponent<Soldiers>().Armor == false)
+        if (collision.gameObject.tag == "Enemey")
         {
-            Target.GetComponent<Soldiers>().UnitHealth -= 10;
-            Target.GetComponent<BaseHealth>().Basehealths -= 5;
-            Destroy(this.gameObject);
+            Target = collision.gameObject;
         }
         else
         {
-            Destroy(this.gameObject);
+            Destroy(gameObject);
+        }
+
+        if (Target.GetComponent<Soldiers>().Armor == true || AArmor == true)
+        {
+            Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+            Target.GetComponent<BaseHealth>().Basehealths -= Damage;
+            Destroy(gameObject);
+        }
+        else
+        {
+            Destroy(gameObject);
         }
     }
 }

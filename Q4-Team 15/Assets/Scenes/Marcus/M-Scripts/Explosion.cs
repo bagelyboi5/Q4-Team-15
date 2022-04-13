@@ -8,7 +8,7 @@ public class Explosion : MonoBehaviour
     {
         if (collision.gameObject.tag == "Enemey" || collision.gameObject.GetComponent<Soldiers>().Armor == false)
         {
-            collision.gameObject.GetComponent<Soldiers>().UnitHealth -= 50;
+            collision.gameObject.GetComponent<Soldiers>().UnitHealth -= 500;
         }
     }
 }

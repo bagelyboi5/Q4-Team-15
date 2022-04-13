@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TankShell : MonoBehaviour
+public class BulletDie : MonoBehaviour
 {
-    public GameObject Explosion;
     private GameObject Target;
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -16,17 +15,14 @@ public class TankShell : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
-        if (Target.GetComponent<Soldiers>().Armor == true)
+        if (Target.GetComponent<Soldiers>().Armor == false)
         {
-            Explosion.SetActive(true);
-            Target.GetComponent<Soldiers>().UnitHealth -= 100;
+            Target.GetComponent<Soldiers>().UnitHealth -= 10;
+            Target.GetComponent<BaseHealth>().Basehealths -= 5;
             Destroy(this.gameObject);
         }
         else
         {
-            Explosion.SetActive(true);
-            Target.GetComponent<Soldiers>().UnitHealth -= 100;
-            Target.GetComponent<BaseHealth>().Basehealths -= 50;
             Destroy(this.gameObject);
         }
     }
