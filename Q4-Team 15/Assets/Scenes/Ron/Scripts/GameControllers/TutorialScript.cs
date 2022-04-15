@@ -17,8 +17,7 @@ public class TutorialScript : MonoBehaviour
 
     public void Update()
     {
-        TutorialBox.text = TextForTutorial[Textnumber];
-        if (Textnumber >= 1 + sizeoftext)
+        if (Textnumber >= sizeoftext)
         {
             Textnumber = 0;
         }
@@ -26,6 +25,7 @@ public class TutorialScript : MonoBehaviour
         {
             Textnumber = sizeoftext;
         }
+        TutorialBox.text = TextForTutorial[Textnumber];
     }
     public void NextText()
     {
