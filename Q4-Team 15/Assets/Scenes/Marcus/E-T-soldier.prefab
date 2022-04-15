@@ -79,7 +79,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3393055384007573162
@@ -257,13 +257,13 @@ MonoBehaviour:
   ToClosestEnemy: 0
   IsEnemey: 1
   closestDistance: 0
-  Bullet: {fileID: 2795946901909040761, guid: a1a3a90b53d9a994399808db4204dcb6, type: 3}
+  Bullet: {fileID: 2725967394063053824, guid: 1153d4079e334ad469a3bad987514bb3, type: 3}
   FirePoint: {fileID: 3393055384626990662}
   bulletSpeed: 1000
   FireRate: 5
   UnitHealth: 500
   canfire: 1
-  RespawnPoint: {fileID: 0}
+  EnemyBase: {fileID: 0}
   Armor: 1
 --- !u!111 &3393055384344682970
 Animation:
@@ -438,7 +438,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &3393055385933780074
@@ -565,13 +565,13 @@ MonoBehaviour:
   ToClosestEnemy: 0
   IsEnemey: 1
   closestDistance: 0
-  Bullet: {fileID: 8176086250378167597, guid: 3e0550b1325d0c6428fa2f9639bb0ef9, type: 3}
+  Bullet: {fileID: 3222198187144724052, guid: d4c970760b91d10489a551ce0e419762, type: 3}
   FirePoint: {fileID: 3393055385989358178}
   bulletSpeed: 1000
   FireRate: 0.5
   UnitHealth: 100
   canfire: 1
-  RespawnPoint: {fileID: 0}
+  EnemyBase: {fileID: 0}
   Armor: 0
 --- !u!1 &3393055385989358178
 GameObject:

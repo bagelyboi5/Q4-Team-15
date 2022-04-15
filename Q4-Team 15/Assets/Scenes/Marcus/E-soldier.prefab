@@ -174,7 +174,7 @@ MonoBehaviour:
   ToClosestEnemy: 0
   IsEnemey: 1
   closestDistance: 0
-  Bullet: {fileID: 8176086250378167597, guid: 3e0550b1325d0c6428fa2f9639bb0ef9, type: 3}
+  Bullet: {fileID: 3222198187144724052, guid: d4c970760b91d10489a551ce0e419762, type: 3}
   FirePoint: {fileID: 5072555767037063254}
   bulletSpeed: 1000
   FireRate: 0.5
@@ -325,6 +325,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

@@ -309,7 +309,7 @@ MonoBehaviour:
   ToClosestEnemy: 0
   IsEnemey: 0
   closestDistance: 0
-  Bullet: {fileID: 1449316368117337357, guid: 67d23045d8baa1b438fa646fc9a14f60, type: 3}
+  Bullet: {fileID: 6955079299310900503, guid: f3471d8c0d22cc84fb178a1dee5087be, type: 3}
   FirePoint: {fileID: 4391260417260343403}
   bulletSpeed: 1000
   FireRate: 5
@@ -461,7 +461,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &4391260417260343403
@@ -508,7 +508,7 @@ GameObject:
   - component: {fileID: 4391260417342117841}
   m_Layer: 8
   m_Name: Gunner
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -705,6 +705,6 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

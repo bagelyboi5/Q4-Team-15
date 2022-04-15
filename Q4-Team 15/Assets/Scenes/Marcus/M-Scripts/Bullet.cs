@@ -2,28 +2,84 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BulletDie : MonoBehaviour
+public class bullet : MonoBehaviour
 {
     private GameObject Target;
+    public GameObject Explosive;
+    public bool Explosives;
+    public bool Enemey;
+    public bool AArmor;
+    public int Damage;
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Enemey")
+        if (Enemey == false)
         {
-            Target = collision.gameObject;
+            if (collision.gameObject.tag == "Enemey")
+            {
+                Target = collision.gameObject;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+            if (AArmor == false)
+            {
+                if (Target.GetComponent<Soldiers>().Armor == false)
+                {
+                    Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                if (Target.GetComponent<Soldiers>().Armor == false)
+                {
+                    Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+                }
+                else
+                {
+                    Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+                }
+            }
         }
         else
         {
-            Destroy(this.gameObject);
-        }
-        if (Target.GetComponent<Soldiers>().Armor == false)
-        {
-            Target.GetComponent<Soldiers>().UnitHealth -= 10;
-            Target.GetComponent<BaseHealth>().Basehealths -= 5;
-            Destroy(this.gameObject);
-        }
-        else
-        {
-            Destroy(this.gameObject);
+            if (collision.gameObject.tag == "Player")
+            {
+                Target = collision.gameObject;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
+
+            if (AArmor == false)
+            {
+                if (Target.GetComponent<Soldiers>().Armor == false)
+                {
+                    Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+                }
+                else
+                {
+                    Destroy(gameObject);
+                }
+            }
+            else
+            {
+                if (Target.GetComponent<Soldiers>().Armor == false)
+                {
+                    Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+                }
+                else
+                {
+                    Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+                }
+            }
         }
     }
 }
