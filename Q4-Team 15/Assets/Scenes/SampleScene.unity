@@ -1628,8 +1628,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 861.4, y: 463.13}
-  m_SizeDelta: {x: 395.63806, y: 188.16791}
+  m_AnchoredPosition: {x: 811.7905, y: 460.1399}
+  m_SizeDelta: {x: 296.41907, y: 194.14807}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &742053665
 MonoBehaviour:
@@ -1680,9 +1680,13 @@ MonoBehaviour:
   Textnumber: 0
   sizeoftext: 0
   TextForTutorial:
-  - you
-  - Are
-  - Gay
+  - 'W,A,S,D to move '
+  - 'To build the barrecks it need to be next to base to build the mine you mining
+    location '
+  - Right click the unit you want and left click to move the unit
+  - Press space to group units and releas to move the units double tap space for
+    the units to follow the mouse
+  - the ICBF has to be built next to base and ICBF is end game
 --- !u!222 &742053667
 CanvasRenderer:
   m_ObjectHideFlags: 0
