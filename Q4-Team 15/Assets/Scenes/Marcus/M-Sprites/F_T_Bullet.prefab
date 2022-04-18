@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6719999548075015408}
   - component: {fileID: 4137366120851985051}
   - component: {fileID: 6187101668104348931}
-  - component: {fileID: 6857405597874332692}
+  - component: {fileID: 8908263003057589367}
   m_Layer: 0
   m_Name: F_T_Bullet
   m_TagString: Untagged
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &6857405597874332692
+--- !u!114 &8908263003057589367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3ee4aa2cece7241b9807a4f65f2cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Explosive: {fileID: 0}
+  Explosives: 1
   Enemey: 0
   AArmor: 1
   Damage: 100

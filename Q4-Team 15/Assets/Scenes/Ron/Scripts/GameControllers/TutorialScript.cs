@@ -10,6 +10,10 @@ public class TutorialScript : MonoBehaviour
     public int sizeoftext;
     [TextArea(4,4)]
     public string[] TextForTutorial;
+    public GameObject Button1;
+    public GameObject Button2;
+    public GameObject Closebutton;
+    public GameObject Openbutton;
     private void Start()
     {
         sizeoftext = TextForTutorial.Length;
@@ -34,5 +38,21 @@ public class TutorialScript : MonoBehaviour
     public void BackText()
     {
         Textnumber--;
+    }
+    public void CloseTutorial()
+    {
+        TutorialBox.enabled = false;
+        Button1.SetActive(false);
+        Button2.SetActive(false);
+        Closebutton.SetActive(false);
+        Openbutton.SetActive(true);
+    }
+    public void OpenTutorial()
+    {
+        TutorialBox.enabled = true;
+        Button1.SetActive(true);
+        Button2.SetActive(true);
+        Closebutton.SetActive(true);
+        Openbutton.SetActive(false);
     }
 }

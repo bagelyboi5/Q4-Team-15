@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1256733081050126259}
   - component: {fileID: 8455520914634455512}
   - component: {fileID: 1868971613335342656}
-  - component: {fileID: 1376005710220971863}
+  - component: {fileID: 1670096608491802267}
   m_Layer: 0
   m_Name: E_Bullet
   m_TagString: Untagged
@@ -121,7 +121,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &1376005710220971863
+--- !u!114 &1670096608491802267
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -133,6 +133,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3ee4aa2cece7241b9807a4f65f2cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Explosive: {fileID: 0}
+  Explosives: 0
   Enemey: 1
   AArmor: 0
   Damage: 50
