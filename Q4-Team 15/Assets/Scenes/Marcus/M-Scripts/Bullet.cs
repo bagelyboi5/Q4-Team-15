@@ -13,6 +13,11 @@ public class Bullet : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        if (Explosives == true)
+        {
+            Explosive.SetActive(true);
+        }
+
         if (Enemey == false)
         {
             if (collision.gameObject.tag == "Enemey")
