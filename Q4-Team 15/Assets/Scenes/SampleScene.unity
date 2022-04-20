@@ -1963,13 +1963,13 @@ MonoBehaviour:
   Textnumber: 0
   sizeoftext: 0
   TextForTutorial:
-  - 'W,A,S,D to move '
-  - 'To build the barrecks it need to be next to base to build the mine you mining
-    location '
-  - Right click the unit you want and left click to move the unit
+  - W to move up, A to move left, S to move down, D to move right
+  - The barrecks have to be built next to your base the mines have to be built on
+    the ore
+  - Left click the unit you want and right click to move the unit
   - Press space to group units and releas to move the units double tap space for
     the units to follow the mouse
-  - the ICBF has to be built next to base and ICBF is end game
+  - the ICBF has to be built next to base
   Button1: {fileID: 1410547692}
   Button2: {fileID: 556257839}
   Closebutton: {fileID: 18877191}
