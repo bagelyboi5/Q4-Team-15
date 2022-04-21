@@ -11,7 +11,6 @@ public class MineScript : MonoBehaviour
     public bool CanBuild;
     public GameObject Player;
     private Vector2 mouse;
-    private int OrderInLayer 2;
 
     public void Start()
     {
@@ -63,7 +62,7 @@ public class MineScript : MonoBehaviour
             Building = true;
             BluePrintMode = false;
             Destroy(collision.gameObject);
-            sprite.sortingOrder = OrderInLayer;
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
     }
 
