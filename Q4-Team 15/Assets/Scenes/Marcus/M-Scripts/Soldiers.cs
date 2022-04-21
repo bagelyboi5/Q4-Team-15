@@ -134,6 +134,5 @@ public class Soldiers : MonoBehaviour
         Destroy(b, 5);
         yield return new WaitForSeconds(FireRate);
         canfire = true;
-        
     }
 }

@@ -42,7 +42,8 @@ public class MineScript : MonoBehaviour
         }
         if(DoneBuilding == true)
         {
-            Player.GetComponent<PlayerManager>().Money += 10 * Time.deltaTime;
+                Player.GetComponent<PlayerManager>().Money += 10 * Time.deltaTime;
+
         }
 
     }
@@ -60,6 +61,8 @@ public class MineScript : MonoBehaviour
         {
             Building = true;
             BluePrintMode = false;
+            Destroy(collision.gameObject);
+            gameObject.GetComponent<SpriteRenderer>().sortingOrder = 2;
         }
     }
 
