@@ -20,6 +20,7 @@ public class Soldiers : MonoBehaviour
     public GameObject EnemyBase;
     private bool IsAlive = true;
     public bool Armor;
+    public bool Base;
 
 
 
@@ -35,6 +36,10 @@ public class Soldiers : MonoBehaviour
         {
             EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
             EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
+            if(Base = true)
+            {
+
+            }
         }
         //Targeting BS
         currentUnit.x = transform.position.x;
