@@ -189,7 +189,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_Sprite: {fileID: -7490004182011987559, guid: aa8ec1b46131b074e8983cb242be5827,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -265,6 +265,7 @@ MonoBehaviour:
   canfire: 1
   EnemyBase: {fileID: 0}
   Armor: 1
+  Base: 0
 --- !u!111 &3393055384344682970
 Animation:
   m_ObjectHideFlags: 0
@@ -573,6 +574,7 @@ MonoBehaviour:
   canfire: 1
   EnemyBase: {fileID: 0}
   Armor: 0
+  Base: 0
 --- !u!1 &3393055385989358178
 GameObject:
   m_ObjectHideFlags: 0
