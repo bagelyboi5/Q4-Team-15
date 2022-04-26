@@ -1970,7 +1970,7 @@ MonoBehaviour:
   - Left click the unit you want and right click to move the unit
   - Press space to group units and releas to move the units double tap space for
     the units to follow the mouse
-  - the ICBF has to be built next to base
+  - Push the button as last resort
   Button1: {fileID: 1410547692}
   Button2: {fileID: 556257839}
   Closebutton: {fileID: 18877191}
