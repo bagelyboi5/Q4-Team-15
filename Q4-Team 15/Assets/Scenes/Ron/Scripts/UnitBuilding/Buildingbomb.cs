@@ -44,6 +44,11 @@ public class Buildingbomb : MonoBehaviour
                 Player.GetComponent<PlayerManager>().OpenTheBombDoor();
                 Player.GetComponent<PlayerManager>().Money -= Cost;
             }
+            else
+            {
+
+            }
         }
     }
+
 }

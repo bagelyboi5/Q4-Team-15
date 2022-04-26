@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BuildUnit : MonoBehaviour
 {
     public GameObject soldier;
     public GameObject Tank;
     public GameObject ICBF;
+    public Text CenterscreenText;
     
     public void BuildSoldier()
     {
@@ -14,7 +16,11 @@ public class BuildUnit : MonoBehaviour
         {
             GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 100f;
             Instantiate(soldier, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
+        } else
+        {
+            StartCoroutine(YouHaveNoMOney());
         }
+        
     }
     public void BuildTank()
     {
@@ -22,6 +28,10 @@ public class BuildUnit : MonoBehaviour
         {
             GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 1000f;
             Instantiate(Tank, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
+        }
+        else
+        {
+            StartCoroutine(YouHaveNoMOney());
         }
     }
     public void ImgoingtoEndGame()
@@ -31,5 +41,16 @@ public class BuildUnit : MonoBehaviour
             GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 10000f;
             Instantiate(ICBF, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
         }
+        else
+        {
+            StartCoroutine(YouHaveNoMOney());
+        }
+    }
+
+  public  IEnumerator YouHaveNoMOney()
+    {
+        CenterscreenText.text = "You dont have enough money!";
+        yield return new WaitForSeconds(2);
+        CenterscreenText.text = " ";
     }
 }
