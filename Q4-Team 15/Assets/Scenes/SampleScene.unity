@@ -1973,6 +1973,7 @@ MonoBehaviour:
   sizeoftext: 0
   TextForTutorial:
   - W to move up, A to move left, S to move down, D to move right
+  - You can only build in the build zone
   - The barrecks have to be built next to your base the mines have to be built on
     the ore
   - Left click the unit you want and right click to move the unit
