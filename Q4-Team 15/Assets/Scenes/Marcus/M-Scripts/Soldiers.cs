@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Soldiers : MonoBehaviour
 {
@@ -34,11 +35,14 @@ public class Soldiers : MonoBehaviour
     {
         if (UnitHealth <= 0)
         {
-            EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
-            EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
-            if(Base = true)
+            if (Base = true)
             {
-
+                SceneManager.LoadScene(2);
+            }
+            else
+            {
+                EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
+                EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
             }
         }
         //Targeting BS

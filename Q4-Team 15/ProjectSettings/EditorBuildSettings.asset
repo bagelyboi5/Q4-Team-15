@@ -11,4 +11,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Marcus/Win_Loss/Win_screen.unity
+    guid: 6ea6c78bcd836164cb2c97728c2f4319
+  - enabled: 1
+    path: Assets/Scenes/Marcus/Win_Loss/Loss_screen.unity
+    guid: d58064ef89dce27489d2af9b195d6cc6
+  - enabled: 1
+    path: Assets/Scenes/Marcus/M Test.unity
+    guid: f4ed5d817fef04f40972d86bf4a464bf
   m_configObjects: {}
