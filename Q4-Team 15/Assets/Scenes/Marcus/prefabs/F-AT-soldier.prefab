@@ -364,7 +364,7 @@ MonoBehaviour:
   FirePoint: {fileID: 8880203380704476309}
   bulletSpeed: 1000
   FireRate: 1
-  UnitHealth: 200
+  UnitHealth: 150
   canfire: 1
   EnemyBase: {fileID: 0}
   Armor: 0
@@ -378,7 +378,7 @@ Animation:
   m_GameObject: {fileID: 989740341095014379}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 4ca4b5628475f2948b0edf0c7a04a217, type: 2}
+  m_Animation: {fileID: 7400000, guid: 1541c49d850caa84fa547b05fddc3cf3, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -394,7 +394,7 @@ Animator:
   m_GameObject: {fileID: 989740341095014379}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 32295408e3d05c94e974ce99320abc8f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 26a996dfcbb3f2e4ea0ba113c1906d07, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
