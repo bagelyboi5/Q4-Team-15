@@ -1,24 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Win : MonoBehaviour
 {
-    public GameObject baSe;
-    public GameObject H;
+    public float H;
 
-    // Start is called before the first frame update
     void Start()
     {
-        H = GetComponent<Soldiers>().UnitHealth;
 
-        baSe = GameObject.FindGameObject;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (H <= 0)
+        H = GetComponent<Soldiers>().UnitHealth;
+        if (H <= 101)
         {
             SceneManager.LoadScene(2);
         }

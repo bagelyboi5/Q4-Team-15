@@ -35,15 +35,8 @@ public class Soldiers : MonoBehaviour
     {
         if (UnitHealth <= 0)
         {
-            if (Base = true)
-            {
-                SceneManager.LoadScene(2);
-            }
-            else
-            {
                 EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
                 EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
-            }
         }
         //Targeting BS
         currentUnit.x = transform.position.x;
