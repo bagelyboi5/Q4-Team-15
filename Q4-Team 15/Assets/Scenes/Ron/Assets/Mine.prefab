@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 9107139486917667066}
   - component: {fileID: 557315524237358682}
-  - component: {fileID: 7751861391146275316}
   - component: {fileID: -2472459623503976633}
   - component: {fileID: -1586766759589359010}
+  - component: {fileID: 2710243527723758224}
   m_Layer: 0
   m_Name: Mine
   m_TagString: Untagged
@@ -84,24 +84,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &7751861391146275316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8217962706446658267}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aecf521b4927e8b42a84611d59a5cd62, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BuildTime: 5
-  DoneBuilding: 0
-  Building: 0
-  BluePrintMode: 1
-  CanBuild: 0
-  Player: {fileID: 0}
 --- !u!61 &-2472459623503976633
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -149,3 +131,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
+--- !u!114 &2710243527723758224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8217962706446658267}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f01883eb43a50dd489e7ec9057792b24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuildTime: 5
+  DoneBuilding: 0
+  Building: 0
+  BluePrintMode: 1
+  CanBuild: 0
+  Player: {fileID: 0}

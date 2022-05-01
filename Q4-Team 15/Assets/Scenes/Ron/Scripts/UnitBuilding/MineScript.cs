@@ -11,6 +11,7 @@ public class MineScript : MonoBehaviour
     public bool CanBuild;
     public GameObject Player;
     private Vector2 mouse;
+    private bool UnitIsCloseEnough;
 
     public void Start()
     {
@@ -45,6 +46,15 @@ public class MineScript : MonoBehaviour
                 Player.GetComponent<PlayerManager>().Money += 10 * Time.deltaTime;
 
         }
+        foreach (GameObject r in GameObject.FindGameObjectsWithTag("Player"))
+        {
+            var Distance = Vector2.Distance(r.transform.position, gameObject.transform.position);
+            if (Distance > 5)
+            {
+                UnitIsCloseEnough = true;
+            }
+
+        }
 
     }
 
@@ -57,7 +67,7 @@ public class MineScript : MonoBehaviour
 
     public void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ore")
+        if(collision.gameObject.tag == "Ore" && UnitIsCloseEnough)
         {
             Building = true;
             BluePrintMode = false;

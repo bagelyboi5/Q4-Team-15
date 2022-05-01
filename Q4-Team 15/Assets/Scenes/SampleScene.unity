@@ -4626,7 +4626,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8eaf87ee49feee648bd3e96f49c38b0a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Money: 100
+  Money: 1000
   Power: 0
   SoldierCount: 0
   TankCount: 0
