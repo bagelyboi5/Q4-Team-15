@@ -1,19 +1,34 @@
 fileFormatVersion: 2
-guid: e288b0e5a79161b4d99f658a6b20e9cb
+guid: d5552227c7ac9ed49a02e249d4ace176
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3078761778362536580
-    second: hamptr_evil_idle_0
+      213: -7941071930739528494
+    second: splodeon_0
   - first:
-      213: -410357366926228674
-    second: hamptr_evil_idle_1
+      213: -2226836383575892281
+    second: splodeon_1
   - first:
-      213: -6538355522309547047
-    second: hamptr_evil_idle_2
+      213: -3773856190788900719
+    second: splodeon_2
   - first:
-      213: 7710424560125930763
-    second: hamptr_evil_idle_3
+      213: 8621690748989668197
+    second: splodeon_3
+  - first:
+      213: 4258223240235312715
+    second: splodeon_4
+  - first:
+      213: 8502631342538704727
+    second: splodeon_5
+  - first:
+      213: -2880902735795819798
+    second: splodeon_6
+  - first:
+      213: 8728362820439640652
+    second: splodeon_7
+  - first:
+      213: 8849671916695607271
+    second: splodeon_8
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -57,7 +72,7 @@ TextureImporter:
   spriteMeshType: 0
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 120
+  spritePixelsToUnits: 1000
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -135,13 +150,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: hamptr_evil_idle_0
+      name: splodeon_0
       rect:
         serializedVersion: 2
-        x: 224
-        y: 1120
-        width: 576
-        height: 832
+        x: 0
+        y: 4096
+        width: 2048
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -149,20 +164,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 48259538685f9ba20800000000000000
-      internalID: 3078761778362536580
+      spriteID: 2dce1701725abc190800000000000000
+      internalID: -7941071930739528494
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hamptr_evil_idle_1
+      name: splodeon_1
       rect:
         serializedVersion: 2
-        x: 1248
-        y: 1120
-        width: 576
-        height: 832
+        x: 2048
+        y: 4096
+        width: 2048
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,20 +185,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e33c561262e1e4af0800000000000000
-      internalID: -410357366926228674
+      spriteID: 7ce1b008b10b811e0800000000000000
+      internalID: -2226836383575892281
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hamptr_evil_idle_2
+      name: splodeon_2
       rect:
         serializedVersion: 2
-        x: 224
-        y: 96
-        width: 576
-        height: 800
+        x: 4096
+        y: 4096
+        width: 2048
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +206,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9db968d4b481345a0800000000000000
-      internalID: -6538355522309547047
+      spriteID: 1986e9a0ac190abc0800000000000000
+      internalID: -3773856190788900719
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: hamptr_evil_idle_3
+      name: splodeon_3
       rect:
         serializedVersion: 2
-        x: 1248
-        y: 96
-        width: 576
-        height: 800
+        x: 0
+        y: 2048
+        width: 2048
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -212,8 +227,113 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b0de0cd294ee00b60800000000000000
-      internalID: 7710424560125930763
+      spriteID: 56bfcc87e0666a770800000000000000
+      internalID: 8621690748989668197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: splodeon_4
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 2048
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b46e988d97f381b30800000000000000
+      internalID: 4258223240235312715
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: splodeon_5
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 2048
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7574f1c382a6ff570800000000000000
+      internalID: 8502631342538704727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: splodeon_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aea6078b93af408d0800000000000000
+      internalID: -2880902735795819798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: splodeon_7
+      rect:
+        serializedVersion: 2
+        x: 2048
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4a08078dbf512970800000000000000
+      internalID: 8728362820439640652
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: splodeon_8
+      rect:
+        serializedVersion: 2
+        x: 4096
+        y: 0
+        width: 2048
+        height: 2048
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e7546d78b950da70800000000000000
+      internalID: 8849671916695607271
       vertices: []
       indices: 
       edges: []
