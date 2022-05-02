@@ -20,11 +20,6 @@ public class Explosion : MonoBehaviour
             {
                 collision.gameObject.GetComponent<Soldiers>().UnitHealth -= EDamage;
             }
-            else
-            {
-                Destroy(gameObject);
-            }
         }
-        Destroy(gameObject);
     }
 }
