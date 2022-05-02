@@ -33,10 +33,15 @@ public class PlayerManager : MonoBehaviour
         }
 
     }
-    public void OpenTopMenu()
+    public IEnumerator UnitProgress()
     {
         barracksUnits.SetActive(true);
+        yield return new WaitForSeconds(60);
         barracksUnits1.SetActive(true);
+    }
+    public void OpenTopMenu()
+    {
+        StartCoroutine(UnitProgress());
     }
     public void OpenTheBombDoor()
     {
@@ -59,7 +64,7 @@ public class PlayerManager : MonoBehaviour
         }
 
 
-        
+
     }
 
 }
