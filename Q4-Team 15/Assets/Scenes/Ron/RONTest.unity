@@ -2632,8 +2632,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soldier: {fileID: 3022546459947456646, guid: 3f43ebac31906e649aa9bac519b7f42c, type: 3}
-  AArmorSoldier: {fileID: 0}
+  Tank: {fileID: 0}
   ICBF: {fileID: 7274661875700231614, guid: 909678b9e2c61594b97189a1373faa43, type: 3}
+  CenterscreenText: {fileID: 0}
 --- !u!1 &1257528553
 GameObject:
   m_ObjectHideFlags: 0
