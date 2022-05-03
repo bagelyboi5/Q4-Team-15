@@ -10,14 +10,14 @@ public class Bullet : MonoBehaviour
     public bool Enemey;
     public bool AArmor;
     public int Damage;
+    private Animator Anim;
 
+    void start()
+    {
+        Anim = GetComponent<Animator>();
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (Explosives == true)
-        {
-            Explosive.SetActive(true);
-        }
-
         if (Enemey == false)
         {
             if (collision.gameObject.tag == "Enemey")
@@ -34,6 +34,7 @@ public class Bullet : MonoBehaviour
                 if (Target.GetComponent<Soldiers>().Armor == false)
                 {
                     Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+                    Destroy(gameObject);
                 }
                 else
                 {
@@ -68,6 +69,7 @@ public class Bullet : MonoBehaviour
                 if (Target.GetComponent<Soldiers>().Armor == false)
                 {
                     Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+                    Destroy(gameObject);
                 }
                 else
                 {
@@ -85,6 +87,17 @@ public class Bullet : MonoBehaviour
                     Target.GetComponent<Soldiers>().UnitHealth -= Damage;
                 }
             }
+        }
+        if (Explosives == true)
+        {
+            Explosive.SetActive(true);
+            Anim.SetBool("impact", true);
+            gameObject.GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
+
+        }
+        else
+        {
+            Anim.SetBool("impact", false);
         }
     }
 }
