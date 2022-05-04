@@ -22,12 +22,17 @@ public class Soldiers : MonoBehaviour
     private bool IsAlive = true;
     public bool Armor;
     public bool Base;
+    private GameObject camera;
+    private Animation shake;
 
 
 
 
     void Start()
     {
+        camera = GameObject.Find("Main Camera");
+        shake = camera.GetComponent<Animation>();
+        shake = null;
         rb2 = GetComponent<Rigidbody2D>();
         EnemyBase = GameObject.Find("BlueBase");
     }
@@ -35,8 +40,9 @@ public class Soldiers : MonoBehaviour
     {
         if (UnitHealth <= 0)
         {
-                EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
-                EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
+            
+            EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
+            EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
         }
         //Targeting BS
         currentUnit.x = transform.position.x;
