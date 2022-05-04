@@ -9,13 +9,28 @@ public class BuildUnit : MonoBehaviour
     public GameObject Tank;
     public GameObject ICBF;
     public Text CenterscreenText;
-    
+    public AudioClip []Buildtank;
+    public AudioClip []BuildSoldiersound;
+
+    public AudioClip []BuildICBF;
+    public AudioSource Sourceofaudio;
+    public int audioCounter;
+    private void Update()
+    {
+        if(audioCounter >= 3 )
+        {
+            audioCounter = 0;
+        }
+    }
     public void BuildSoldier()
     {
         if(GameObject.Find("Player").GetComponent<PlayerManager>().Money >= 100f)
         {
             GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 100f;
             Instantiate(soldier, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
+            Sourceofaudio.clip = BuildSoldiersound[audioCounter];
+            Sourceofaudio.Play();
+            audioCounter++;
         } else
         {
             StartCoroutine(YouHaveNoMOney());
@@ -28,6 +43,9 @@ public class BuildUnit : MonoBehaviour
         {
             GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 1000f;
             Instantiate(Tank, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
+            Sourceofaudio.clip = Buildtank[audioCounter];
+            Sourceofaudio.Play();
+            audioCounter++;
         }
         else
         {
@@ -40,6 +58,9 @@ public class BuildUnit : MonoBehaviour
         {
             GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 10000f;
             Instantiate(ICBF, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
+            Sourceofaudio.clip = BuildICBF[audioCounter];
+            Sourceofaudio.Play();
+            audioCounter++;
         }
         else
         {
