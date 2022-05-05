@@ -22,7 +22,7 @@ public class Soldiers : MonoBehaviour
     private bool IsAlive = true;
     public bool Armor;
     public bool Base;
-    private GameObject camera;
+    private GameObject cameraa;
     private Animator shake;
 
 
@@ -30,8 +30,8 @@ public class Soldiers : MonoBehaviour
 
     void Start()
     {
-        camera = GameObject.Find("CameraParent");
-        shake = camera.GetComponent<Animator>();
+        cameraa = GameObject.Find("CameraParent");
+        shake = cameraa.GetComponent<Animator>();
         rb2 = GetComponent<Rigidbody2D>();
         EnemyBase = GameObject.Find("BlueBase");
     }
