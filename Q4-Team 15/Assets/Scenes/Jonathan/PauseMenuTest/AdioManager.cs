@@ -10,6 +10,14 @@ public class AdioManager : MonoBehaviour
 
     void Start()
     {
+        firstplay = PlayerPrefs.GetInt(FirstPlay);
 
+        if(firstplay == 0)
+        {
+
+        }else
+        {
+
+        }
     }
 }
