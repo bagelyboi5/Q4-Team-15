@@ -24,6 +24,7 @@ public class Soldiers : MonoBehaviour
     public bool Base;
     private GameObject cameraa;
     private Animator shake;
+    public AudioClip Deathsound;
 
 
 
@@ -40,6 +41,8 @@ public class Soldiers : MonoBehaviour
         if (UnitHealth <= 0)
         {
             shake.SetBool("shakey", true);
+            GameObject.Find("Audio Source").GetComponent<AudioSource>().clip = Deathsound;
+            GameObject.Find("Audio Source").GetComponent<AudioSource>().Play();
             EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
             EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
         }

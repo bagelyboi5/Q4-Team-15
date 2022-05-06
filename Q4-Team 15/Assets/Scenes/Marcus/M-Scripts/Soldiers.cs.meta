@@ -3,7 +3,13 @@ guid: f6903228e23fb784e890cba690a95105
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - Enemey: {instanceID: 0}
+  - PLayer: {instanceID: 0}
+  - Bullet: {instanceID: 0}
+  - FirePoint: {instanceID: 0}
+  - EnemyBase: {instanceID: 0}
+  - Deathsound: {fileID: 8300000, guid: a938cce7945142e44ad60732bb81b4f2, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
