@@ -21,7 +21,7 @@ public class shakecontroll : MonoBehaviour
     }
     public IEnumerator WaitTurnOffAnim()
     {
-        yield return new WaitForSeconds(0.01f);
+        yield return new WaitForSeconds(0.08f);
         shake.SetBool("shakey", false);
     }
 }
