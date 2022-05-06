@@ -4,6 +4,8 @@ using UnityEngine.UI;
 public class AdioManager : MonoBehaviour
 {
     private static readonly string FirstPlay = "FristPlay";
+    private static readonly string BackgroundPref = "BackgroundPref";
+    private static readonly string SoundEffectsPref = "SoundEffectsPref";
     private int firstplay;
     public Slider backgroundSlider, soundEffectsSlider;
     private float backgroundFloat, soundEffectsFloat;
@@ -14,6 +16,12 @@ public class AdioManager : MonoBehaviour
 
         if(firstplay == 0)
         {
+            backgroundFloat = .25f;
+            soundEffectsFloat = .75f;
+            backgroundSlider.value = backgroundFloat;
+            soundEffectsSlider.value = soundEffectsFloat;
+            PlayerPrefs.SetFloat(BackgroundPref, backgroundFloat);
+            PlayerPrefs.SetFloat(SoundEffectsPref, soundEffectsFloat);
 
         }else
         {
