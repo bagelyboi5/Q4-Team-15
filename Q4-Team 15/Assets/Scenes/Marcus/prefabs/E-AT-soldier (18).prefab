@@ -183,6 +183,7 @@ MonoBehaviour:
   EnemyBase: {fileID: 0}
   Armor: 0
   Base: 0
+  Deathsound: {fileID: 0}
 --- !u!111 &8117809995145768960
 Animation:
   m_ObjectHideFlags: 0

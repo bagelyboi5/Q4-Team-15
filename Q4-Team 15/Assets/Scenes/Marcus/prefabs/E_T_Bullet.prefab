@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8951770347865895820}
   - component: {fileID: 1192595236910760980}
   - component: {fileID: 6579844185849072110}
+  - component: {fileID: 5447300535074500340}
   m_Layer: 0
   m_Name: E_T_Bullet
   m_TagString: Untagged
@@ -74,8 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 3078761778362536580, guid: e288b0e5a79161b4d99f658a6b20e9cb,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -83,7 +83,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &8951770347865895820
@@ -135,11 +135,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff3ee4aa2cece7241b9807a4f65f2cdf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Explosive: {fileID: 0}
+  Explosive: {fileID: 5476589032195838136}
   Explosives: 1
   Enemey: 1
   AArmor: 1
   Damage: 100
+--- !u!95 &5447300535074500340
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2725967394063053824}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 927a16613cb611e43bb40ad4f2c430a7, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5476589032195838136
 GameObject:
   m_ObjectHideFlags: 0

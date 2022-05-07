@@ -281,12 +281,13 @@ MonoBehaviour:
   Bullet: {fileID: 6955079299310900503, guid: f3471d8c0d22cc84fb178a1dee5087be, type: 3}
   FirePoint: {fileID: 4391260417260343403}
   bulletSpeed: 1000
-  FireRate: 1
+  FireRate: 5
   UnitHealth: 500
   canfire: 1
   EnemyBase: {fileID: 0}
   Armor: 1
   Base: 0
+  Deathsound: {fileID: 0}
 --- !u!111 &4391260416340168012
 Animation:
   m_ObjectHideFlags: 0

@@ -137,8 +137,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 3
-  m_Sprite: {fileID: -3912358597542472309, guid: 578ac29ede840ff49917ce55a71a4d01,
-    type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -146,7 +145,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &4137366120851985051
@@ -203,7 +202,6 @@ MonoBehaviour:
   Enemey: 0
   AArmor: 1
   Damage: 100
-  Anim: {fileID: 1702295526348311141}
 --- !u!95 &1702295526348311141
 Animator:
   serializedVersion: 3
