@@ -28,6 +28,7 @@ public class Soldiers : MonoBehaviour
     private GameObject PlayerControll;
     private progresiveUniits PROG;
     public bool TankUnit;
+    public AudioClip []Shootsound;
 
 
 
@@ -141,6 +142,8 @@ public class Soldiers : MonoBehaviour
             if(canfire == true)
             {
                 StartCoroutine(Shoot());
+                GameObject.Find("Audio Source").GetComponent<AudioSource>().clip = Shootsound[Random.Range(0, 1)];
+                GameObject.Find("Audio Source").GetComponent<AudioSource>().Play();
             }
 
         }
@@ -154,6 +157,8 @@ public class Soldiers : MonoBehaviour
             if(canfire == true)
             {
                 StartCoroutine(Shoot());
+                GameObject.Find("Audio Source").GetComponent<AudioSource>().clip = Shootsound[Random.Range(0, 1)];
+                GameObject.Find("Audio Source").GetComponent<AudioSource>().Play();
             }
         }
     }
