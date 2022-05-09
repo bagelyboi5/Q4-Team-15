@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 3393055384344682981}
   - component: {fileID: 3393055384344682970}
   - component: {fileID: 3393055384344682971}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: E-T-soldier
   m_TagString: Enemey
   m_Icon: {fileID: 0}
@@ -266,6 +266,8 @@ MonoBehaviour:
   EnemyBase: {fileID: 0}
   Armor: 1
   Base: 0
+  Deathsound: {fileID: 0}
+  TankUnit: 1
 --- !u!111 &3393055384344682970
 Animation:
   m_ObjectHideFlags: 0
@@ -454,7 +456,7 @@ GameObject:
   - component: {fileID: 3393055385933780086}
   - component: {fileID: 3393055385933780087}
   - component: {fileID: 3393055385933780084}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Gunner
   m_TagString: Enemey
   m_Icon: {fileID: 0}
@@ -575,6 +577,8 @@ MonoBehaviour:
   EnemyBase: {fileID: 0}
   Armor: 0
   Base: 0
+  Deathsound: {fileID: 0}
+  TankUnit: 0
 --- !u!1 &3393055385989358178
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class BuildUnit : MonoBehaviour
 {
     public GameObject soldier;
+    public GameObject ATsoldier;
     public GameObject Tank;
     public GameObject ICBF;
     public Text CenterscreenText;
@@ -31,11 +32,30 @@ public class BuildUnit : MonoBehaviour
             Sourceofaudio.clip = BuildSoldiersound[audioCounter];
             Sourceofaudio.Play();
             audioCounter++;
+            gameObject.GetComponent<PlayerManager>().SoldierCount++;
         } else
         {
             StartCoroutine(YouHaveNoMOney());
         }
         
+    }
+    public void BuildATsoldier()
+    {
+        if (GameObject.Find("Player").GetComponent<PlayerManager>().Money >= 350f)
+        {
+            GameObject.Find("Player").GetComponent<PlayerManager>().Money -= 350f;
+            Instantiate(ATsoldier, GameObject.Find("Red Base").transform.position, Quaternion.identity, null);
+            Sourceofaudio.clip = BuildSoldiersound[audioCounter];
+            Sourceofaudio.Play();
+            audioCounter++;
+            gameObject.GetComponent<PlayerManager>().AntiTankSoldier++;
+
+        }
+        else
+        {
+            StartCoroutine(YouHaveNoMOney());
+        }
+
     }
     public void BuildTank()
     {
@@ -46,6 +66,8 @@ public class BuildUnit : MonoBehaviour
             Sourceofaudio.clip = Buildtank[audioCounter];
             Sourceofaudio.Play();
             audioCounter++;
+            gameObject.GetComponent<PlayerManager>().TankCount++;
+
         }
         else
         {

@@ -81,10 +81,12 @@ public class Bullet : MonoBehaviour
                 if (Target.GetComponent<Soldiers>().Armor == false)
                 {
                     Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+                    Destroy(gameObject);
                 }
                 else
                 {
                     Target.GetComponent<Soldiers>().UnitHealth -= Damage;
+                    Destroy(gameObject);
                 }
             }
         }

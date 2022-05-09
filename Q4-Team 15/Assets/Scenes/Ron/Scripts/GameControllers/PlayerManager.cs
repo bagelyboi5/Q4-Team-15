@@ -8,11 +8,13 @@ public class PlayerManager : MonoBehaviour
     public float Money;
     public float Power;
     public int SoldierCount;
+    public int AntiTankSoldier;
     public int TankCount;
-    public int planeCount;
     public GameObject MoneyTezt;
-    public GameObject barracksUnits;
+    public GameObject barracksUnits0;
     public GameObject barracksUnits1;
+    public GameObject barracksUnits2;
+    public GameObject ICBFhide;
     public GameObject PlayerBase;
     public GameObject ClosestBarracks;
     public float DistanceToBarracks;
@@ -33,16 +35,8 @@ public class PlayerManager : MonoBehaviour
         }
 
     }
-    public IEnumerator UnitProgress()
-    {
-        barracksUnits.SetActive(true);
-        yield return new WaitForSeconds(60);
-        barracksUnits1.SetActive(true);
-    }
-    public void OpenTopMenu()
-    {
-        StartCoroutine(UnitProgress());
-    }
+
+
     public void OpenTheBombDoor()
     {
         BombButton.SetActive(true);

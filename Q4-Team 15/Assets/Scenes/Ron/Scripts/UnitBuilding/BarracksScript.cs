@@ -41,7 +41,6 @@ public class BarracksScript : MonoBehaviour
             {
                 BluePrintMode = false;
                 IsBuilt = true;
-                Player.GetComponent<PlayerManager>().OpenTopMenu();
                 Player.GetComponent<PlayerManager>().Money -= Cost;
             }
         }

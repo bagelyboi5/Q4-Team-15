@@ -183,6 +183,8 @@ MonoBehaviour:
   EnemyBase: {fileID: 0}
   Armor: 0
   Base: 0
+  Deathsound: {fileID: 0}
+  TankUnit: 0
 --- !u!111 &8117809995145768960
 Animation:
   m_ObjectHideFlags: 0
@@ -192,7 +194,7 @@ Animation:
   m_GameObject: {fileID: 9128669432109380194}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 921914688f7f38c45a83b4cc0ace2696, type: 2}
+  m_Animation: {fileID: 7400000, guid: 6177dc3969b781c45bd096c49c74f723, type: 2}
   m_Animations: []
   m_WrapMode: 0
   m_PlayAutomatically: 1
@@ -208,7 +210,7 @@ Animator:
   m_GameObject: {fileID: 9128669432109380194}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 56b414c791b119d48bbc737744878526, type: 2}
+  m_Controller: {fileID: 9100000, guid: 60fe746f2ec5c01478e60ebcfd81f3d7, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

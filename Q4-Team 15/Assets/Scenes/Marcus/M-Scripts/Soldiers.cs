@@ -25,12 +25,17 @@ public class Soldiers : MonoBehaviour
     private GameObject cameraa;
     private Animator shake;
     public AudioClip Deathsound;
+    private GameObject PlayerControll;
+    private progresiveUniits PROG;
+    public bool TankUnit;
 
 
 
 
     void Start()
     {
+        PlayerControll = GameObject.Find("Player");
+        PROG = PlayerControll.GetComponent<progresiveUniits>();
         cameraa = GameObject.Find("CameraParent");
         shake = cameraa.GetComponent<Animator>();
         rb2 = GetComponent<Rigidbody2D>();
@@ -43,8 +48,25 @@ public class Soldiers : MonoBehaviour
             shake.SetBool("shakey", true);
             GameObject.Find("Audio Source").GetComponent<AudioSource>().clip = Deathsound;
             GameObject.Find("Audio Source").GetComponent<AudioSource>().Play();
-            EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
-            EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
+            if (IsEnemey == true)
+            {
+                if (TankUnit == true)
+                {
+                    PROG.TankKilled++;
+                    EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
+                    EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
+                }
+                else
+                {
+                    PROG.SolKilled++;
+                    EnemyBase.GetComponent<EnemyRespawnScript>().UnitThatDied = gameObject;
+                    EnemyBase.GetComponent<EnemyRespawnScript>().UnitDied();
+                }
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
         //Targeting BS
         currentUnit.x = transform.position.x;
