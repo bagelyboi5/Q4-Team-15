@@ -18,7 +18,7 @@ public class TutorialScript : MonoBehaviour
     {
         sizeoftext = TextForTutorial.Length;
     }
-
+    
     public void Update()
     {
         if (Textnumber >= sizeoftext)

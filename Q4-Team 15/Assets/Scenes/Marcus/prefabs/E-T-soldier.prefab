@@ -266,6 +266,8 @@ MonoBehaviour:
   EnemyBase: {fileID: 0}
   Armor: 1
   Base: 0
+  Deathsound: {fileID: 0}
+  TankUnit: 1
 --- !u!111 &3393055384344682970
 Animation:
   m_ObjectHideFlags: 0
@@ -575,6 +577,8 @@ MonoBehaviour:
   EnemyBase: {fileID: 0}
   Armor: 0
   Base: 0
+  Deathsound: {fileID: 0}
+  TankUnit: 0
 --- !u!1 &3393055385989358178
 GameObject:
   m_ObjectHideFlags: 0
