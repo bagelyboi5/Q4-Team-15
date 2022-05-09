@@ -127,7 +127,7 @@ GameObject:
   - component: {fileID: 3393055384344682981}
   - component: {fileID: 3393055384344682970}
   - component: {fileID: 3393055384344682971}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: E-T-soldier
   m_TagString: Enemey
   m_Icon: {fileID: 0}
@@ -456,7 +456,7 @@ GameObject:
   - component: {fileID: 3393055385933780086}
   - component: {fileID: 3393055385933780087}
   - component: {fileID: 3393055385933780084}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Gunner
   m_TagString: Enemey
   m_Icon: {fileID: 0}
