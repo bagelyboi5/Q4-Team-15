@@ -34,6 +34,7 @@ public class progresiveUniits : MonoBehaviour
         if (TankKilled >= 5)
         {
             PManager.barracksUnits2.SetActive(true);
+            PManager.ICBFhide.SetActive(true);
         }
         if (SolKilled >= 20 && TankKilled <= 5)
         {

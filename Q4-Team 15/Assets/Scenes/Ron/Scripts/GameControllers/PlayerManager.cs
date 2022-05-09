@@ -14,6 +14,7 @@ public class PlayerManager : MonoBehaviour
     public GameObject barracksUnits0;
     public GameObject barracksUnits1;
     public GameObject barracksUnits2;
+    public GameObject ICBFhide;
     public GameObject PlayerBase;
     public GameObject ClosestBarracks;
     public float DistanceToBarracks;

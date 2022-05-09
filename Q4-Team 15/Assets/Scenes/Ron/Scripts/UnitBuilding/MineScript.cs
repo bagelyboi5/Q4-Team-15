@@ -49,7 +49,7 @@ public class MineScript : MonoBehaviour
         foreach (GameObject r in GameObject.FindGameObjectsWithTag("Player"))
         {
             var Distance = Vector2.Distance(r.transform.position, gameObject.transform.position);
-            if (Distance > 5)
+            if (Distance < 5)
             {
                 UnitIsCloseEnough = true;
             }

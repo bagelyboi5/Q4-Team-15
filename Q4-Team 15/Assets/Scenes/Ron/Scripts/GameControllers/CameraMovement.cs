@@ -8,21 +8,48 @@ public class CameraMovement : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            transform.Translate(Vector3.up * MovementSpeed * Time.deltaTime);
+            MovementSpeed = 5;
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            transform.Translate(Vector3.down * MovementSpeed * Time.deltaTime);
+            MovementSpeed = 10;
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.Translate(Vector3.up * MovementSpeed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Translate(Vector3.down * MovementSpeed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate(Vector3.right * MovementSpeed * Time.deltaTime);
+            }
         }
-        if (Input.GetKey(KeyCode.A))
+        else
         {
-            transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(Vector3.right * MovementSpeed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.W))
+            {
+                transform.Translate(Vector3.up * MovementSpeed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                transform.Translate(Vector3.down * MovementSpeed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                transform.Translate(Vector3.left * MovementSpeed * Time.deltaTime);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                transform.Translate(Vector3.right * MovementSpeed * Time.deltaTime);
+            }
         }
     }
 }
