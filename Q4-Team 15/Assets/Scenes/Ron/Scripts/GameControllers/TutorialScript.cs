@@ -14,8 +14,16 @@ public class TutorialScript : MonoBehaviour
     public GameObject Button2;
     public GameObject Closebutton;
     public GameObject Openbutton;
+
+    public GameObject Cam;
+    public Animator Anim;
+    public Component TutCont;
+
     private void Start()
     {
+        Cam = GameObject.Find("Main Camera");
+        Anim = Cam.GetComponent<Animator>();
+        TutCont = Cam.GetComponent<CameraTutorialCutscene>();
         sizeoftext = TextForTutorial.Length;
     }
     
@@ -46,6 +54,11 @@ public class TutorialScript : MonoBehaviour
         Button2.SetActive(false);
         Closebutton.SetActive(false);
         Openbutton.SetActive(true);
+        Anim.enabled = false;
+        Cam.transform.position = new Vector3(0, 9.1f, -10);
+        Cam.GetComponent<CameraTutorialCutscene>().enabled = false;
+        Cam.GetComponent<CameraMovement>().enabled = true;
+
     }
     public void OpenTutorial()
     {
@@ -54,5 +67,8 @@ public class TutorialScript : MonoBehaviour
         Button2.SetActive(true);
         Closebutton.SetActive(true);
         Openbutton.SetActive(false);
+        Anim.enabled = true;
+        Cam.transform.position = new Vector2(0, 0);
+        Cam.GetComponent<CameraTutorialCutscene>().enabled = true;
     }
 }
