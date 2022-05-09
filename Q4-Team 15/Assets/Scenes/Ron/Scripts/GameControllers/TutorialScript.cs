@@ -14,6 +14,7 @@ public class TutorialScript : MonoBehaviour
     public GameObject Button2;
     public GameObject Closebutton;
     public GameObject Openbutton;
+    public bool isActive;
 
     public GameObject Cam;
     public Animator Anim;
@@ -21,6 +22,7 @@ public class TutorialScript : MonoBehaviour
 
     private void Start()
     {
+        isActive = true;
         Cam = GameObject.Find("Main Camera");
         Anim = Cam.GetComponent<Animator>();
         TutCont = Cam.GetComponent<CameraTutorialCutscene>();
@@ -29,23 +31,44 @@ public class TutorialScript : MonoBehaviour
     
     public void Update()
     {
-        if (Textnumber >= sizeoftext)
+        if (isActive == true)
         {
-            Textnumber = 0;
+            if (Textnumber > 0)
+            {
+                Button2.SetActive(true);
+            }
+
+            if (Textnumber < 5)
+            {
+                Button1.SetActive(true);
+            }
+
+            if (Textnumber >= 5)
+            {
+                Button2.SetActive(false);
+            }
+
+            if (Textnumber <= 0)
+            {
+                Button1.SetActive(false);
+            }
         }
-        if (Textnumber <= -1)
-        {
-            Textnumber = sizeoftext;
-        }
+
         TutorialBox.text = TextForTutorial[Textnumber];
     }
     public void NextText()
     {
-        Textnumber++;
+        if (Textnumber < sizeoftext)
+        {
+            Textnumber++;
+        }
     }
     public void BackText()
     {
-        Textnumber--;
+        if (Textnumber > 0)
+        {
+            Textnumber--;
+        }
     }
     public void CloseTutorial()
     {
@@ -55,6 +78,7 @@ public class TutorialScript : MonoBehaviour
         Closebutton.SetActive(false);
         Openbutton.SetActive(true);
         Anim.enabled = false;
+        isActive = false;
         Cam.transform.position = new Vector3(0, 9.1f, -10);
         Cam.GetComponent<CameraTutorialCutscene>().enabled = false;
         Cam.GetComponent<CameraMovement>().enabled = true;
@@ -68,6 +92,7 @@ public class TutorialScript : MonoBehaviour
         Closebutton.SetActive(true);
         Openbutton.SetActive(false);
         Anim.enabled = true;
+        isActive = true;
         Cam.transform.position = new Vector2(0, 0);
         Cam.GetComponent<CameraTutorialCutscene>().enabled = true;
     }
