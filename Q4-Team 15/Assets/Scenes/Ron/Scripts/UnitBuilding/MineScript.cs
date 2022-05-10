@@ -12,6 +12,7 @@ public class MineScript : MonoBehaviour
     public GameObject Player;
     private Vector2 mouse;
     private bool UnitIsCloseEnough;
+    public bool canmoneyrate;
 
     public void Start()
     {
@@ -43,7 +44,10 @@ public class MineScript : MonoBehaviour
         }
         if(DoneBuilding == true)
         {
-                Player.GetComponent<PlayerManager>().Money += 50 * Time.deltaTime;
+            if(canmoneyrate == true)
+            {
+                StartCoroutine(Moneymakin());
+            }
 
         }
         foreach (GameObject r in GameObject.FindGameObjectsWithTag("Player"))
@@ -56,6 +60,13 @@ public class MineScript : MonoBehaviour
 
         }
 
+    }
+    IEnumerator Moneymakin()
+    {
+        canmoneyrate = false;
+        yield return new WaitForSeconds(1);
+        Player.GetComponent<PlayerManager>().Money += 50;
+        canmoneyrate = true;
     }
 
     IEnumerator BuildingMine()
