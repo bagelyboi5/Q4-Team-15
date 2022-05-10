@@ -28,7 +28,8 @@ public class PlayerManager : MonoBehaviour
     }
     public void Update()
     {
-        MoneyTezt.GetComponent<Text>().text = "Money: " + Money;
+        Money = Mathf.Round(Money * 1.0f) * 1;
+        MoneyTezt.GetComponent<Text>().text = "Money: $" + Money;
         if(GameObject.Find("BArracks(Clone)") != null)
         {
         DistanceToBarracks = Vector3.Distance(GameObject.Find("BArracks(Clone)").transform.position, PlayerBase.transform.position);
