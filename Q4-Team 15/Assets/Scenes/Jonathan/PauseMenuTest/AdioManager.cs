@@ -16,16 +16,33 @@ public class AdioManager : MonoBehaviour
 
         if(firstplay == 0)
         {
-            backgroundFloat = .25f;
+            backgroundFloat = .125f;
             soundEffectsFloat = .75f;
             backgroundSlider.value = backgroundFloat;
             soundEffectsSlider.value = soundEffectsFloat;
             PlayerPrefs.SetFloat(BackgroundPref, backgroundFloat);
             PlayerPrefs.SetFloat(SoundEffectsPref, soundEffectsFloat);
+            PlayerPrefs.SetInt(FirstPlay, -1);
+
 
         }else
         {
-
+            backgroundFloat = PlayerPrefs.GetFloat(BackgroundPref);
+            backgroundSlider.value = backgroundFloat;
+            soundEffectsFloat = PlayerPrefs.GetFloat(SoundEffectsPref);
+            soundEffectsSlider.value = soundEffectsFloat;
+        }
+    }
+    public void SaveSoundSettings()
+    {
+        PlayerPrefs.SetFloat(BackgroundPref, backgroundSlider.value);
+        PlayerPrefs.SetFloat(SoundEffectsPref, soundEffectsSlider.value);
+    }
+    void OnApplicationFocus(bool infocus)
+    {
+        if (! infocus)
+        {
+            SaveSoundSettings();
         }
     }
 }
