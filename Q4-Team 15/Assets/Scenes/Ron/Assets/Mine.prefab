@@ -149,3 +149,4 @@ MonoBehaviour:
   BluePrintMode: 1
   CanBuild: 0
   Player: {fileID: 0}
+  canmoneyrate: 1
