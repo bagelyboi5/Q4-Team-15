@@ -918,7 +918,7 @@ RectTransform:
   - {fileID: 333742947}
   - {fileID: 926103444}
   m_Father: {fileID: 935627911}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1013,7 +1013,7 @@ RectTransform:
   - {fileID: 375086291}
   - {fileID: 1175140307}
   m_Father: {fileID: 935627911}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -1708,7 +1708,7 @@ RectTransform:
   - {fileID: 1938696366}
   - {fileID: 1146581920}
   m_Father: {fileID: 935627911}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1784,7 +1784,7 @@ RectTransform:
   - {fileID: 672483293}
   - {fileID: 1337807545}
   m_Father: {fileID: 935627911}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -2021,7 +2021,7 @@ RectTransform:
   - {fileID: 78201441}
   - {fileID: 693499264}
   m_Father: {fileID: 935627911}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -3271,12 +3271,12 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 1231972132}
+  - {fileID: 1082615753}
   - {fileID: 171946974}
   - {fileID: 160125971}
   - {fileID: 495405706}
   - {fileID: 372716966}
   - {fileID: 344489482}
-  - {fileID: 1082615753}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3489,7 +3489,7 @@ RectTransform:
   - {fileID: 1279949229}
   - {fileID: 261330020}
   m_Father: {fileID: 935627911}
-  m_RootOrder: 6
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -5674,7 +5674,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: e4ac821f5cee6e74fafeb20b21b777d0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.02
   m_Pitch: 1
   Loop: 0
   Mute: 0

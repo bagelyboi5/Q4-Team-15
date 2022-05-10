@@ -183,8 +183,9 @@ MonoBehaviour:
   EnemyBase: {fileID: 0}
   Armor: 0
   Base: 0
-  Deathsound: {fileID: 0}
+  Deathsound: {fileID: 8300000, guid: 9896b52e81011744bab5b06a2185b7c9, type: 3}
   TankUnit: 0
+  Shootsound: {fileID: 8300000, guid: 0c7ed832845dce541aa1280e3f7f5872, type: 3}
 --- !u!111 &8117809995145768960
 Animation:
   m_ObjectHideFlags: 0

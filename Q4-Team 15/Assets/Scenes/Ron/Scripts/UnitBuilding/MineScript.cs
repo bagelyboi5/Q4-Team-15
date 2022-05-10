@@ -60,7 +60,7 @@ public class MineScript : MonoBehaviour
 
     IEnumerator BuildingMine()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(1);
         DoneBuilding = true;
         Building = false;
     }
