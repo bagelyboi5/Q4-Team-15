@@ -65,7 +65,7 @@ public class MineScript : MonoBehaviour
     {
         canmoneyrate = false;
         yield return new WaitForSeconds(1);
-        Player.GetComponent<PlayerManager>().Money += 50;
+        Player.GetComponent<PlayerManager>().Money += 25;
         canmoneyrate = true;
     }
 
