@@ -5,16 +5,22 @@ using UnityEngine;
 public class CameraMovement : MonoBehaviour
 {
     public int MovementSpeed;
+    public int MovementSpeedBase;
+    public int MovementSpeedFast;
 
+    private void Start()
+    {
+        MovementSpeed = MovementSpeedBase;
+    }
     void Update()
     {
         if (Input.GetKeyUp(KeyCode.LeftShift))
         {
-            MovementSpeed = 5;
+            MovementSpeed = MovementSpeedBase;
         }
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            MovementSpeed = 10;
+            MovementSpeed = MovementSpeedFast;
             if (Input.GetKey(KeyCode.W))
             {
                 transform.Translate(Vector3.up * MovementSpeed * Time.deltaTime);
