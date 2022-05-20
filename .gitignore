@@ -58,3 +58,35 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
+BreakOut/.vsconfig
+BreakOut/Assets/GridManager.cs
+BreakOut/Assets/GridManager.cs.meta
+BreakOut/Assets/Player.cs
+BreakOut/Assets/Player.cs.meta
+BreakOut/Assets/Scenes.meta
+BreakOut/Assets/Tile.png
+BreakOut/Assets/Tile.png.meta
+BreakOut/Assets/Scenes/SampleScene.unity
+BreakOut/Assets/Scenes/SampleScene.unity.meta
+BreakOut/Packages/manifest.json
+BreakOut/Packages/packages-lock.json
+BreakOut/ProjectSettings/AudioManager.asset
+BreakOut/ProjectSettings/ClusterInputManager.asset
+BreakOut/ProjectSettings/DynamicsManager.asset
+BreakOut/ProjectSettings/EditorBuildSettings.asset
+BreakOut/ProjectSettings/EditorSettings.asset
+BreakOut/ProjectSettings/GraphicsSettings.asset
+BreakOut/ProjectSettings/InputManager.asset
+BreakOut/ProjectSettings/NavMeshAreas.asset
+BreakOut/ProjectSettings/NetworkManager.asset
+BreakOut/ProjectSettings/PackageManagerSettings.asset
+BreakOut/ProjectSettings/Physics2DSettings.asset
+BreakOut/ProjectSettings/PresetManager.asset
+BreakOut/ProjectSettings/ProjectSettings.asset
+BreakOut/ProjectSettings/ProjectVersion.txt
+BreakOut/ProjectSettings/QualitySettings.asset
+BreakOut/ProjectSettings/TagManager.asset
+BreakOut/ProjectSettings/TimeManager.asset
+BreakOut/ProjectSettings/UnityConnectSettings.asset
+BreakOut/ProjectSettings/VFXManager.asset
+BreakOut/ProjectSettings/XRSettings.asset
